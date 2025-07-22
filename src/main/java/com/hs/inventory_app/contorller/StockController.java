@@ -1,6 +1,7 @@
 package com.hs.inventory_app.contorller;
 
 import com.hs.inventory_app.dto.StockDto;
+import com.hs.inventory_app.dto.StockResponseDto;
 import com.hs.inventory_app.dto.StockUpdateDto;
 import com.hs.inventory_app.model.Stock;
 import com.hs.inventory_app.query.StockSearchCondition;
@@ -18,7 +19,7 @@ public class StockController {
     private final StockService stockService;
 
     @GetMapping
-    public List<Stock> search(StockSearchCondition condition) {
+    public List<StockResponseDto> search(StockSearchCondition condition) {
         return stockService.search(condition);
     }
 
